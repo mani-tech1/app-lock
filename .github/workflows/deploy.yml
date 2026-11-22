@@ -17,6 +17,14 @@ jobs:
         run: |
           echo "---- files in repo ----"
           ls -la
+          # If the project was uploaded as a .zip file, unpack it first.
+          if [ -z "$(find . -maxdepth 3 -name 'settings.gradle.kts' -not -path './.git/*' | head -n 1)" ]; then
+            z=$(ls ./*.zip 2>/dev/null | head -n 1)
+            if [ -n "$z" ]; then
+              echo "Unzipping $z"
+              unzip -q "$z" -d _unzipped
+            fi
+          fi
           f=$(find . -maxdepth 3 -name 'settings.gradle.kts' -not -path './.git/*' | head -n 1)
           if [ -z "$f" ]; then
             echo "ERROR: settings.gradle.kts not found. Upload the files INSIDE the AppLocker folder to the repo root."
