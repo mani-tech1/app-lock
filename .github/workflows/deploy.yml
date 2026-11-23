@@ -14,6 +14,7 @@ jobs:
 
       - name: Find the Android project folder
         id: proj
+        shell: bash
         run: |
           echo "---- files in repo ----"
           ls -la
@@ -57,7 +58,16 @@ jobs:
 
       - name: Build debug APK
         working-directory: ${{ steps.proj.outputs.dir }}
-        run: gradle assembleDebug --console=plain
+        shell: bash
+        run: gradle assembleDebug --console=plain 2>&1 | tee build.log
+
+      - name: Show errors only
+        if: failure()
+        working-directory: ${{ steps.proj.outputs.dir }}
+        shell: bash
+        run: |
+          echo "======== ERRORS ========"
+          grep -E "^e: |^w: .*error|What went wrong|Execution failed|Could not |error:|Unresolved|Manifest merger|AAPT|Duplicate" -A2 build.log | head -80 || true
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
