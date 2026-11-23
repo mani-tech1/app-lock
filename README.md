@@ -14,7 +14,7 @@ A modern Android application designed to protect your personal apps from unautho
 - 🔒 Privacy Protection
 - 🎨 Modern UI
 - ⚡ Easy to Use
-- ❌ Ad Free
+- ✔️ Ad Free
 
 ---
 
