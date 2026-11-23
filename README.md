@@ -1,4 +1,4 @@
-🔒 App Lock
+🔒 APP LOCK
 
 Your Privacy. Your Control. Your Security.
 
@@ -6,7 +6,7 @@ A modern Android application designed to protect your personal apps from unautho
 
 ---
 
-✨ Features
+✨ FEATURES
 
 - 🔐 App Locking
 - 👆 Fingerprint Authentication
@@ -14,18 +14,18 @@ A modern Android application designed to protect your personal apps from unautho
 - 🔒 Privacy Protection
 - 🎨 Modern UI
 - ⚡ Easy to Use
-- ❌ Ad free
+- ❌ Ad Free
 
 ---
 
-📱 Platform
+📱 PLATFORM
 
 - Android
 - Native Android
 
 ---
 
-📦 Installation
+📦 INSTALLATION
 
 1. Visit the "Releases" (https://github.com/mani-tech1/app-lock/releases) section.
 2. Download the latest APK.
@@ -34,10 +34,12 @@ A modern Android application designed to protect your personal apps from unautho
 
 ---
 
-👨‍💻 Developer
+👨‍💻 DEVELOPER
 
-Manish
+Manish Kumar Yadav
 
 GitHub: "@mani-tech1" (https://github.com/mani-tech1)
 
 ---
+
+⭐ If you like this project, consider giving it a star!
